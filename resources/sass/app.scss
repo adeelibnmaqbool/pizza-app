@@ -1,0 +1,14 @@
+@import "~noty/src/noty.scss";
+@import "~noty/src/themes/mint.scss";
+
+body{
+    font-size: 18px;
+}
+section.cart,
+section.auth{
+    min-height: calc(100vh - 132px);
+}
+.noty_theme__mint{
+    border-radius: 50px !important;
+    padding-left: 8px !important;
+}

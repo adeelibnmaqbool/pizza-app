@@ -1,0 +1,45 @@
+{
+  "name": "pizza-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "node index.js",
+    "dev": "nodemon index.js",
+<<<<<<< HEAD
+    "watch": "npx mix watch"
+=======
+    "watch":"npx mix watch"
+>>>>>>> d45a2d51d708793da93a2a31f80ed12245809072
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^16.0.2",
+    "ejs": "^3.1.8",
+    "express": "^5.0.0-beta.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.6.2",
+<<<<<<< HEAD
+    "noty": "^3.2.0-beta-deprecated",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+=======
+>>>>>>> d45a2d51d708793da93a2a31f80ed12245809072
+    "webpack": "^5.74.0"
+  },
+  "devDependencies": {
+    "laravel-mix": "^6.0.49",
+    "nodemon": "^2.0.20",
+    "path-browserify": "^1.0.1",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.55.0",
+    "sass-loader": "^12.1.0"
+  }
+}

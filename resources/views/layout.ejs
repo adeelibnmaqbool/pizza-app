@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Order your pizza</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/app.css">
+
+</head>
+
+<body>
+  <!-- Header Start -->
+  <header class="header container mx-auto py-3 flex items-center justify-between px-4">
+    <a href="/">
+      <img src="/img/logo.png" alt="Logo" class="logo w-20">
+    </a>
+    <nav>
+      <ul class="flex items-center">
+        <li><a href="/" class="hover:text-orange-500 px-3 py-2 transition">Home</a></li>
+        <li><a href="/offers" class="hover:text-orange-500 px-3 py-2 transition">Offers</a></li>
+        <% if(user){ %>
+          <form action="/logout" method="POST" id="logout">
+            <li><a onclick="document.getElementById('logout').submit()" href="#" class="hover:text-orange-500 px-3 py-2 transition">Logout</a></li>
+          </form>
+        <% }else{ %> 
+        <li><a href="/register" class="hover:text-orange-500 px-3 py-2 transition">Register</a></li>
+        <li><a href="/login" class="hover:text-orange-500 px-3 py-2">Login</a></li>
+        <% } %> 
+        <li><a href="/cart" class="inline-block flex items-center space-x-1 bg-orange-500 ml-2 px-4 py-2 rounded-full hover:bg-orange-600 transition">
+           
+            <span id="cartCounter" class="bg-white text-orange-500 rounded-full px-2 font-bold"><%= session.cart ? session.cart.totalQty : '0'%></span>
+            
+            <img src="/img/cart.png" alt="" class="w-6">
+          </a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Header End -->
+
+  <%-body %>
+
+  <!-- Footer Start -->
+  <footer class="footer bg-slate-100 px-4 py-5 border">
+    <div class="container mx-auto flex items-center justify-between">
+      <p>© All rights reserved.</p>
+      <a href="/" class="hover:text-orange-500">WhatsApp</a>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <script src="js/app.js" type="module"></script>
+</body>
+
+</html>
